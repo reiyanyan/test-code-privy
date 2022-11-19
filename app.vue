@@ -1,6 +1,12 @@
+<script setup lang="ts">
+import "~/assets/tailwind.css";
+
+const layout = ref<"auth" | "guest" | false>("guest");
+</script>
+
 <template>
   <main class="font-sans">
-    <NuxtLayout>
+    <NuxtLayout :name="layout">
       <NuxtPage />
     </NuxtLayout>
   </main>

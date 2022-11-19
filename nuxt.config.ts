@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       "~/components",
     ],
   },
-  css: ["@/assets/tailwind.css"],
+  css: ["@/assets/tailwind.css", "@/assets/global.scss"],
   app: {
     head: {
       link: [
@@ -18,7 +18,7 @@ export default defineNuxtConfig({
         { rel: "preconnect", href: "https://fonts.gstatic.com" },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap&family=Material+Symbols+Rounded:wght@100..700",
+          href: "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Material+Symbols+Rounded:wght@100..700&family=Raleway:wght@200;300;400;500;600;700;800&family=Roboto:wght@200;300;400;500;600;700;800",
         },
       ],
     },

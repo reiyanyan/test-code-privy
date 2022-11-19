@@ -1,0 +1,22 @@
+<template>
+  <div class="flex flex-row text-white w-screen h-screen">
+    <div
+      class="flex flex-col gap-y-16 w-full max-w-[560px] bg-prim-back p-24 font-raleway"
+    >
+      <div class="flex flex-row gap-x-3 items-center">
+        <img class="w-[59px] h-[38px]" src="~/assets/img/ic_logo.svg" alt="" />
+        <p class="text-primary text-3xl font-bold">PRISIGN</p>
+      </div>
+      <div class="flex flex-col pl-9 gap-y-4">
+        <p class="text-3xl font-bold">Welcome to Prisign</p>
+        <p class="font-roboto font-light">
+          Is a personal data platform, you can update your information about
+          yourself, customize your profile and change a lot of things
+        </p>
+      </div>
+    </div>
+    <div class="w-full bg-second-back p-24">
+      <slot></slot>
+    </div>
+  </div>
+</template>
