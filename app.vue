@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import "~/assets/tailwind.css";
 
-const layout = ref<"auth" | "guest" | false>("guest");
+const layout = ref<"auth" | "guest" | false>("auth");
 </script>
 
 <template>
