@@ -6,6 +6,9 @@
         class="w-full rounded-md p-4 bg-transparent border border-secondary focus:border-0 focus:outline-none focus:ring-1 focus:ring-primary"
         :placeholder="placeholder ?? label"
         :type="!show && type == 'password' ? 'text' : type"
+        :value="modelValue"
+        @input="(event: Event) => $emit('update:modelValue', (event.target as HTMLInputElement)?.value)"
+        v-bind="$attrs"
       />
       <div
         v-if="type == 'password'"
@@ -19,11 +22,21 @@
   </div>
 </template>
 
+<script lang="ts">
+export default {
+  inheritAttrs: false,
+};
+</script>
+
 <script lang="ts" setup>
 const show = ref<boolean>(true);
+
+const emit = defineEmits(["update:modelValue"]);
+
 const props = defineProps<{
   label: string;
   placeholder?: string;
   type?: string;
+  modelValue: string;
 }>();
 </script>

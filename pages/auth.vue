@@ -16,5 +16,5 @@
 type TabProps = "login" | "registration";
 
 const headers = reactive<Array<TabProps>>(["login", "registration"]);
-const activeTab = ref<TabProps>("registration");
+const activeTab = ref<TabProps>("login");
 </script>
